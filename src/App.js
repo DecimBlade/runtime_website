@@ -7,7 +7,7 @@ const [age , setAge] = useState();
 	
 // Push Function
 const Push = () => {
-	database.ref("user").set({
+	database.ref("User").set({
 	name : name,
 	age : age,
 	}).catch(alert);
@@ -22,7 +22,7 @@ return (
         <input placeholder="Enter your age" value={age}
         onChange={(e) => setAge(e.target.value)}/>
         <br/><br/>
-        <button onClick={Push}>PUSH</button>
+        <button onClick={Push}>Submit</button>
         </center>
 	</div>
 );
